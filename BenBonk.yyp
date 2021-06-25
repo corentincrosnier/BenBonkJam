@@ -23,6 +23,8 @@
     {"id":{"name":"obj_EnemyController","path":"objects/obj_EnemyController/obj_EnemyController.yy",},"order":1,},
     {"id":{"name":"spr_ground","path":"sprites/spr_ground/spr_ground.yy",},"order":13,},
     {"id":{"name":"Room3","path":"rooms/Room3/Room3.yy",},"order":5,},
+    {"id":{"name":"obj_dialogue","path":"objects/obj_dialogue/obj_dialogue.yy",},"order":3,},
+    {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},"order":4,},
     {"id":{"name":"obj_ladder2","path":"objects/obj_ladder2/obj_ladder2.yy",},"order":7,},
     {"id":{"name":"obj_rope","path":"objects/obj_rope/obj_rope.yy",},"order":12,},
     {"id":{"name":"spr_box1","path":"sprites/spr_box1/spr_box1.yy",},"order":6,},
