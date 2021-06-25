@@ -7,6 +7,7 @@
     {"id":{"name":"spr_ladder1","path":"sprites/spr_ladder1/spr_ladder1.yy",},"order":10,},
     {"id":{"name":"obj_platform3","path":"objects/obj_platform3/obj_platform3.yy",},"order":4,},
     {"id":{"name":"spr_player1","path":"sprites/spr_player1/spr_player1.yy",},"order":0,},
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":15,},
     {"id":{"name":"obj_platform2","path":"objects/obj_platform2/obj_platform2.yy",},"order":3,},
     {"id":{"name":"Room5","path":"rooms/Room5/Room5.yy",},"order":7,},
     {"id":{"name":"obj_box2","path":"objects/obj_box2/obj_box2.yy",},"order":11,},
