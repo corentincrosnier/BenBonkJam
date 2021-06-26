@@ -3,11 +3,12 @@
 var delta_x = keyboard_check(vk_right) - keyboard_check(vk_left);
 var delta_y = keyboard_check(vk_down) - keyboard_check(vk_up);
 
+
 if(delta_x !=0 || delta_y != 0) {
 	var Dir = point_direction(0, 0, delta_x, delta_y);
-	var instAcc = delta_time/60000*acc;
-	var xx_spd = lengthdir_x(instAcc,Dir);
-	var yy_spd = lengthdir_y(instAcc,Dir);
+	var instAcc = (delta_time / ideal_delta_time) * acc;
+	var xx_spd = lengthdir_x(instAcc, Dir);
+	var yy_spd = lengthdir_y(instAcc, Dir);
 
 	if (abs(x_speed) < max_speed || sign(x_speed) != sign(xx_spd))
 		x_speed += xx_spd;
@@ -15,8 +16,11 @@ if(delta_x !=0 || delta_y != 0) {
 		y_speed += yy_spd;
 }
 
-if (place_meeting(x + x_speed, y, obj_collider1)) {
-	while (!place_meeting(x + sign(x_speed), y, obj_collider1)) {
+if (grab_object) {
+}
+
+if (place_meeting(x + x_speed, y, obj_collider2)) {
+	while (!place_meeting(x + sign(x_speed), y, obj_collider2)) {
 		x += sign(x_speed);
 	}
 	x_speed = 0;
@@ -24,8 +28,8 @@ if (place_meeting(x + x_speed, y, obj_collider1)) {
 
 x += x_speed;
 
-if (place_meeting(x, y + y_speed, obj_collider1)) {
-	while (!place_meeting(x, y + sign(y_speed), obj_collider1)) {
+if (place_meeting(x, y + y_speed, obj_collider2)) {
+	while (!place_meeting(x, y + sign(y_speed), obj_collider2)) {
 		y += sign(y_speed);
 	}
 	y_speed = 0;
