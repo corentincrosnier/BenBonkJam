@@ -1,5 +1,3 @@
-// Les actifs du script ont changé pour v2.3.0 Voir
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 pour plus d’informations
 function scr_ladder_verif(_vmove) {
 	if (position_meeting(x, y + sprite_height / 2 - 1, obj_ladder1)) {
 		if (_vmove == 1 && ((!instance_position(x, y + sprite_height / 2 + 1, obj_collider1))

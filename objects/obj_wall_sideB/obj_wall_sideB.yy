@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprite_wall_side_b",
-    "path": "sprites/sprite_wall_side_b/sprite_wall_side_b.yy",
+    "name": "spr_wall2",
+    "path": "sprites/spr_wall2/spr_wall2.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,7 +23,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
