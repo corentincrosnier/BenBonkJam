@@ -35,7 +35,7 @@
     "spriteId": {"name":"spr_button1","path":"sprites/spr_button1/spr_button1.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
