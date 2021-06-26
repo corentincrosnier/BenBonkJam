@@ -4,3 +4,5 @@ globalvar pause;
 pause=false;
 globalvar side;
 side=true;
+
+randomize();

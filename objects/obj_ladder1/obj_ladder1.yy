@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_ladder1",
+    "path": "sprites/spr_ladder1/spr_ladder1.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -21,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "level",
+    "path": "folders/Objects/level.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_ladder1",
