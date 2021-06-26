@@ -1,6 +1,6 @@
 /// @desc create player2
 
-max_speed = 5;
+max_speed = 3;
 grv = 0;
 fric = 0.2
 
