@@ -15,8 +15,8 @@ if(delta_x !=0 || delta_y != 0) {
 		y_speed += yy_spd;
 }
 
-if (place_meeting(x + x_speed, y, obj_wall)) {
-	while (!place_meeting(x + sign(x_speed), y, obj_wall)) {
+if (place_meeting(x + x_speed, y, obj_collider1)) {
+	while (!place_meeting(x + sign(x_speed), y, obj_collider1)) {
 		x += sign(x_speed);
 	}
 	x_speed = 0;
@@ -24,8 +24,8 @@ if (place_meeting(x + x_speed, y, obj_wall)) {
 
 x += x_speed;
 
-if (place_meeting(x, y + y_speed, obj_wall)) {
-	while (!place_meeting(x, y + sign(y_speed), obj_wall)) {
+if (place_meeting(x, y + y_speed, obj_collider1)) {
+	while (!place_meeting(x, y + sign(y_speed), obj_collider1)) {
 		y += sign(y_speed);
 	}
 	y_speed = 0;
