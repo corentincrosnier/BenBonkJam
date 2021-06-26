@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if(!climbing){
 
-if(distance_to_object(obj_player1)<100){
+if(distance_to_object(obj_player1)<maxDist && abs(y-obj_player1.y)<=30){
 	spd=70;
 	dir=point_direction(x,y,obj_player1.x,obj_player1.y);
 	hsp=lengthdir_x(spd/room_speed,dir);
@@ -20,7 +20,7 @@ if (place_meeting(x + hsp, y, obj_collider1)){
 	while (!place_meeting(x + sign(hsp), y, obj_collider1)) {
 		x += sign(hsp);
 	}
-	if(distance_to_object(obj_player1)<100)
+	if(distance_to_object(obj_player1)<maxDist && abs(y-obj_player1.y)<=30)
 		hsp = 0;
 	else{
 		hsp*=-1;

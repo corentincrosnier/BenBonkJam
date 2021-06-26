@@ -8,3 +8,4 @@ walkDir=choose(-1,1);
 climbing=false;
 climbCooldown=room_speed*5;
 grv = 0.3*room_speed;
+maxDist=100;

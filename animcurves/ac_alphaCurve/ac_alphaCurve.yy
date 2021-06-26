@@ -8,11 +8,11 @@
       ],"resourceVersion":"1.0","name":"curve1","tags":[],"resourceType":"GMAnimCurveChannel",},
   ],
   "parent": {
-    "name": "Timelines",
-    "path": "folders/Timelines.yy",
+    "name": "Animation Curves",
+    "path": "folders/Animation Curves.yy",
   },
   "resourceVersion": "1.2",
-  "name": "ac_switchFade",
+  "name": "ac_alphaCurve",
   "tags": [],
   "resourceType": "GMAnimCurve",
 }
