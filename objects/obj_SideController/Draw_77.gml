@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-	show_debug_message(layer_get_depth("InstancesB"));
 	
 gpu_set_blendenable(false);
 if(side && alarm[0]<=fadeTime*room_speed/2){
