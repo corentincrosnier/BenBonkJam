@@ -14,6 +14,7 @@
     {"id":{"name":"spr_backgroundA1","path":"sprites/spr_backgroundA1/spr_backgroundA1.yy",},"order":8,},
     {"id":{"name":"obj_enemy2","path":"objects/obj_enemy2/obj_enemy2.yy",},"order":15,},
     {"id":{"name":"obj_platform3","path":"objects/obj_platform3/obj_platform3.yy",},"order":9,},
+    {"id":{"name":"obj_p2_grab","path":"objects/obj_p2_grab/obj_p2_grab.yy",},"order":22,},
     {"id":{"name":"spr_backgroundA3","path":"sprites/spr_backgroundA3/spr_backgroundA3.yy",},"order":20,},
     {"id":{"name":"obj_deck1A","path":"objects/obj_deck1A/obj_deck1A.yy",},"order":17,},
     {"id":{"name":"spr_platform2","path":"sprites/spr_platform2/spr_platform2.yy",},"order":16,},
