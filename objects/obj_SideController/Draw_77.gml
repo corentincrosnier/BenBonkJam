@@ -5,8 +5,8 @@ if(side && alarm[0]<=fadeTime*room_speed/2){
 	xScale=1;
 	layer_set_visible("BackgroundA",true);
 	layer_set_visible("BackgroundB",false);
-	layer_set_visible("DecksA",true);
-	layer_set_visible("DecksB",false);
+	layer_set_visible("TileDeckA",true);
+	layer_set_visible("TileDeckB",false);
 	application_surface_draw_enable(true);
 	exit;
 }
@@ -14,8 +14,8 @@ gpu_set_blendenable(false);
 if(!side && alarm[0]<=fadeTime*room_speed/2){
 	layer_set_visible("BackgroundA",false);
 	layer_set_visible("BackgroundB",true);
-	layer_set_visible("DecksA",false);
-	layer_set_visible("DecksB",true);
+	layer_set_visible("TileDeckA",false);
+	layer_set_visible("TileDeckB",true);
 	xScale=-1;
 	xPos=window_get_width();
 	application_surface_draw_enable(false);
