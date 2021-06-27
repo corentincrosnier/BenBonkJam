@@ -13,11 +13,11 @@ else{
 }
 
 vsp+=grv/room_speed;
-if (place_meeting(x + hsp, y, obj_collider1)){
+if (place_meeting(x + hsp, y, obj_collider1) || place_meeting(x + hsp, y, obj_wallEnemy)){
 	var otherEnemy=instance_place(x + hsp, y, obj_enemy1);
 	if(otherEnemy!=noone)
 		otherEnemy.walkDir*=-1;
-	while (!place_meeting(x + sign(hsp), y, obj_collider1)) {
+	while (!place_meeting(x + sign(hsp), y, obj_collider1) && !place_meeting(x + sign(hsp), y, obj_wallEnemy)) {
 		x += sign(hsp);
 	}
 	if(distance_to_object(obj_player1)<maxDist && abs(y-obj_player1.y)<=30)
@@ -28,8 +28,8 @@ if (place_meeting(x + hsp, y, obj_collider1)){
 	image_xscale=walkDir;
 	}
 }
-if (place_meeting(x, y + vsp, obj_collider1)){
-	while (!place_meeting(x, y + sign(vsp), obj_collider1)) {
+if (place_meeting(x, y + vsp, obj_collider1) || place_meeting(x, y + vsp, obj_wallEnemy)){
+	while (!place_meeting(x, y + sign(vsp), obj_collider1) && !place_meeting(x, y + sign(vsp), obj_wallEnemy)) {
 		y += sign(vsp);
 	}
 	vsp = 0;

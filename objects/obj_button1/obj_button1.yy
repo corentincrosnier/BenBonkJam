@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_button1",
-    "path": "sprites/spr_button1/spr_button1.yy",
+    "name": "spr_buttonFlatRed",
+    "path": "sprites/spr_buttonFlatRed/spr_buttonFlatRed.yy",
   },
   "solid": false,
   "visible": true,
