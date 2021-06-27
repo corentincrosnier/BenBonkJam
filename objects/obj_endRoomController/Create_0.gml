@@ -1,3 +1,4 @@
 /// @desc fade room ending
 
-fadeTime=0.9;
+fadeTime=1.5;
+alarm[0]=fadeTime*room_speed;

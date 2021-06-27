@@ -44,7 +44,7 @@
     "spriteId": {"name":"spr_teleporter_work","path":"sprites/spr_teleporter_work/spr_teleporter_work.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 12.0,
+    "playbackSpeed": 5.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
