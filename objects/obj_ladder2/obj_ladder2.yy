@@ -21,8 +21,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "level",
-    "path": "folders/Objects/level.yy",
+    "name": "BenBonk",
+    "path": "BenBonk.yyp",
   },
   "resourceVersion": "1.0",
   "name": "obj_ladder2",
