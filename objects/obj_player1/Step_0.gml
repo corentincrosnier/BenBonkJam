@@ -4,11 +4,13 @@
 var hmove = 0;
 var vmove = 0;
 var jump = 0;
+var use = 0;
 
 if (side) {
 	var hmove = keyboard_check(vk_right) - keyboard_check(vk_left);
 	var vmove = keyboard_check(vk_down) - keyboard_check(vk_up);
 	var jump = keyboard_check_pressed(vk_space);
+	var use = keyboard_check_pressed(ord("E"));
 }
 
 hsp = 0;
@@ -59,6 +61,12 @@ if (!climb_ladder) {
 			y += sign(vsp);
 		}
 		vsp = 0;
+	}
+
+	if (use){
+		with (instance_place(x, y, obj_usable))
+			if (layer == layer_get_id("Instances"))
+				state = !state;
 	}
 }
 

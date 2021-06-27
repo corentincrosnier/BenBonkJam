@@ -10,6 +10,12 @@ if(side && alarm[0]<=fadeTime*room_speed/2){
 	layer_set_visible("TileDeckA",true);
 	layer_set_visible("TileDeckB",false);
 	layer_depth("InstancesB", 800);
+	with (obj_box1)
+		image_index = 0;
+	with (obj_box2) {
+		if (!is_grabbed)
+			image_index = 1;
+	}
 	application_surface_draw_enable(true);
 }
 
@@ -19,6 +25,12 @@ if(!side && alarm[0]<=fadeTime*room_speed/2){
 	layer_set_visible("BackgroundB",true);
 	layer_set_visible("TileDeckA",false);
 	layer_set_visible("TileDeckB",true);
+	with (obj_box1)
+		image_index = 1;
+	with (obj_box2) {
+		if (!is_grabbed)
+			image_index = 1;
+	}
 	xScale=-1;
 	xPos=window_get_width();
 	application_surface_draw_enable(false);

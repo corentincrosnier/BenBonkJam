@@ -4,5 +4,5 @@ state=false;
 opened=false;
 closed=false;
 buttonId=0;
-leverId=0;
+leverId=1;
 image_speed=0;

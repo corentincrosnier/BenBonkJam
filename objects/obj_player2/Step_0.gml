@@ -2,27 +2,42 @@
 
 var delta_x = 0;
 var delta_y = 0;
+var use = 0;
 
 if (!side) {
 	delta_x = keyboard_check(vk_left) - keyboard_check(vk_right);
 	delta_y = keyboard_check(vk_down) - keyboard_check(vk_up);
+	use = keyboard_check_pressed(ord("E"));
 	if (keyboard_check_pressed(vk_space)) {
 		if (!grab_object) {
 			object_grabbed = instance_place(x, y, obj_p2_grab);
 			if (object_grabbed != noone) {
 				grab_object = true;
+				with (object_grabbed) {
+					is_grabbed = true;
+					x = other.x - other.sprite_width / 2 - sprite_width / 2;
+					y = other.y;
+				}
 			}
 		}
 		else {
 			grab_object = false;
-			object_grabbed = noone;
+			if (object_grabbed != noone) {
+				with (object_grabbed)
+					is_grabbed = false;
+				object_grabbed = noone;
+			}
 		}
 	}
 }
 
 else {
 	grab_object = false;
-	object_grabbed = noone;
+	if (object_grabbed != noone) {
+		with (object_grabbed)
+			is_grabbed = false;
+		object_grabbed = noone;
+	}
 }
 
 if(delta_x !=0 || delta_y != 0) {
@@ -73,6 +88,11 @@ if (grab_object) {
 }
 
 else {
+	if (use) {
+		with (instance_place(x, y, obj_usable))
+			if (layer == layer_get_id("InstancesB"))
+				state = !state;
+	}
 	x_speed -= x_speed * fric;
 	y_speed -= y_speed * fric;
 }
