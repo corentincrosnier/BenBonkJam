@@ -5,8 +5,6 @@ grv = 0;
 fric = 0.02;
 fric_grab = 0.1;
 
-depth = -200;
-
 x_speed = 0;
 y_speed = 0;
 grab_object = false;

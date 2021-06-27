@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+	show_debug_message(layer_get_depth("InstancesB"));
+	
+gpu_set_blendenable(false);
 if(side && alarm[0]<=fadeTime*room_speed/2){
 	xPos=0;
 	xScale=1;
@@ -7,11 +10,12 @@ if(side && alarm[0]<=fadeTime*room_speed/2){
 	layer_set_visible("BackgroundB",false);
 	layer_set_visible("TileDeckA",true);
 	layer_set_visible("TileDeckB",false);
+	layer_depth("InstancesB", 800);
 	application_surface_draw_enable(true);
-	exit;
 }
-gpu_set_blendenable(false);
+
 if(!side && alarm[0]<=fadeTime*room_speed/2){
+	layer_depth("InstancesB", -800);
 	layer_set_visible("BackgroundA",false);
 	layer_set_visible("BackgroundB",true);
 	layer_set_visible("TileDeckA",false);
