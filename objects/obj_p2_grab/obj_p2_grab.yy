@@ -1,15 +1,12 @@
 {
-  "spriteId": {
-    "name": "spr_platform1",
-    "path": "sprites/spr_platform1/spr_platform1.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_p2_grab",
-    "path": "objects/obj_p2_grab/obj_p2_grab.yy",
+    "name": "obj_collider1",
+    "path": "objects/obj_collider1/obj_collider1.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -31,7 +28,7 @@
     "path": "folders/Objects/level.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_platform1",
+  "name": "obj_p2_grab",
   "tags": [],
   "resourceType": "GMObject",
 }

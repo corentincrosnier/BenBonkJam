@@ -1,8 +1,24 @@
 /// @description Insert description here
 
-var delta_x = keyboard_check(vk_right) - keyboard_check(vk_left);
-var delta_y = keyboard_check(vk_down) - keyboard_check(vk_up);
+var delta_x = 0;
+var delta_y = 0;
 
+if (!side) {
+	delta_x = keyboard_check(vk_left) - keyboard_check(vk_right);
+	delta_y = keyboard_check(vk_down) - keyboard_check(vk_up);
+	if (keyboard_check_pressed(vk_space)) {
+		if (!grab_object) {
+			if ((object_grabbed = instance_place(x, y, obj_p2_grab)) != noone) {
+				grab_object = true;
+			}
+		}
+	}
+}
+
+else {
+	grab_object = false;
+	object_grabbed = noone;
+}
 
 if(delta_x !=0 || delta_y != 0) {
 	var Dir = point_direction(0, 0, delta_x, delta_y);
@@ -17,6 +33,13 @@ if(delta_x !=0 || delta_y != 0) {
 }
 
 if (grab_object) {
+	x_speed -= x_speed * fric_grab;
+	y_speed -= y_speed * fric_grab;
+}
+
+else {
+	x_speed -= x_speed * fric;
+	y_speed -= y_speed * fric;
 }
 
 if (place_meeting(x + x_speed, y, obj_collider2)) {

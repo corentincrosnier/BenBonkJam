@@ -1,9 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var hmove = keyboard_check(vk_right) - keyboard_check(vk_left);
-var vmove = keyboard_check(vk_down) - keyboard_check(vk_up);
-var jump = keyboard_check_pressed(vk_space);
+var hmove = 0;
+var vmove = 0;
+var jump = 0;
+
+if (side) {
+	var hmove = keyboard_check(vk_right) - keyboard_check(vk_left);
+	var vmove = keyboard_check(vk_down) - keyboard_check(vk_up);
+	var jump = keyboard_check_pressed(vk_space);
+}
 
 hsp = 0;
 

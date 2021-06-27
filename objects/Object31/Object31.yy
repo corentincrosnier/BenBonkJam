@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "spr_platform1",
-    "path": "sprites/spr_platform1/spr_platform1.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_p2_grab",
-    "path": "objects/obj_p2_grab/obj_p2_grab.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -27,11 +21,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "level",
-    "path": "folders/Objects/level.yy",
+    "name": "BenBonk",
+    "path": "BenBonk.yyp",
   },
   "resourceVersion": "1.0",
-  "name": "obj_platform1",
+  "name": "Object31",
   "tags": [],
   "resourceType": "GMObject",
 }
