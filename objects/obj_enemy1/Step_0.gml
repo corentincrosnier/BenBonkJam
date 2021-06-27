@@ -25,6 +25,7 @@ if (place_meeting(x + hsp, y, obj_collider1)){
 	else{
 		hsp*=-1;
 		walkDir*=-1;
+	image_xscale=walkDir;
 	}
 }
 if (place_meeting(x, y + vsp, obj_collider1)){
