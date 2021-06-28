@@ -24,7 +24,7 @@ if(vertical && state){
 		with(instance_place(x,y - 4,obj_collider1)){
 			y += other.y_spd;
 		}
-		with(instance_place(x,y - 4,obj_ennemy)){
+		with(instance_place(x,y - 4,obj_enemy)){
 			y += other.y_spd;
 		}
 	}
