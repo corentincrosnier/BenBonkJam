@@ -35,11 +35,6 @@ if (!side) {
 	}
 }
 
-if (keyboard_check(ord("E")) == 0 && use_button != noone) {
-	with(use_button)
-		used = false;
-}
-
 else {
 	grab_object = false;
 	audio_stop_sound(snd_techNoise2);
@@ -48,6 +43,11 @@ else {
 			is_grabbed = false;
 		object_grabbed = noone;
 	}
+}
+
+if (keyboard_check(ord("E")) == 0 && use_button != noone) {
+	with(use_button)
+		used = false;
 }
 
 if(delta_x !=0 || delta_y != 0) {
