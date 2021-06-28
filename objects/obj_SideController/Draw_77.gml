@@ -24,7 +24,7 @@ if(!side && alarm[0]<=fadeTime*room_speed/2){
 	layer_set_visible("BackgroundA",false);
 	layer_set_visible("BackgroundB",true);
 	layer_set_visible("TileDeckA",false);
-	//layer_set_visible("TileDeckB",true);
+	layer_set_visible("TileDeckB",true);
 	with (obj_box1)
 		image_index = 1;
 	with (obj_box2) {

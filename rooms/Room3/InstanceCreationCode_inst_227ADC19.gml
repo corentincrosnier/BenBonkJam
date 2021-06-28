@@ -1,2 +1,1 @@
-leverId=1;
-state = true;
+buttonId=1;

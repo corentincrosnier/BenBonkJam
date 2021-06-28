@@ -1,1 +1,2 @@
-/// @desc ??
+/// @desc
+room_goto_next();
