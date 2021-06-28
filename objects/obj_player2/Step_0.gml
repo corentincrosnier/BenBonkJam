@@ -13,6 +13,7 @@ if (!side) {
 			object_grabbed = instance_place(x, y, obj_p2_grab);
 			if (object_grabbed != noone) {
 				grab_object = true;
+				audio_play_sound(snd_techNoise2, 1, true);
 				with (object_grabbed) {
 					is_grabbed = true;
 					x = other.x - other.sprite_width / 2 - sprite_width / 2;
@@ -24,6 +25,7 @@ if (!side) {
 		}
 		else {
 			grab_object = false;
+			audio_stop_sound(snd_techNoise2);
 			if (object_grabbed != noone) {
 				with (object_grabbed)
 					is_grabbed = false;
@@ -33,8 +35,14 @@ if (!side) {
 	}
 }
 
+if (keyboard_check(ord("E")) == 0 && use_button != noone) {
+	with(use_button)
+		used = false;
+}
+
 else {
 	grab_object = false;
+	audio_stop_sound(snd_techNoise2);
 	if (object_grabbed != noone) {
 		with (object_grabbed)
 			is_grabbed = false;
@@ -96,6 +104,13 @@ else {
 		with (instance_place(x, y, obj_usable))
 			if (layer == layer_get_id("InstancesB"))
 				state = !state;
+		var _button = instance_place(x, y, obj_pushButton1);
+		with (_button) {
+			if (layer == layer_get_id("InstancesB")) {
+				used = true;
+				other.use_button = _button;
+			}
+		}
 	}
 	x_speed -= x_speed * fric;
 	y_speed -= y_speed * fric;
