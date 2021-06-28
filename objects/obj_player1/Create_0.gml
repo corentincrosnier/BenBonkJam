@@ -9,4 +9,5 @@ hsp = 0;
 vsp = 0;
 climb_ladder = false;
 
+is_dead = false;
 killX = 0;

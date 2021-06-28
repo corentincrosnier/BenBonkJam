@@ -6,7 +6,7 @@ var vmove = 0;
 var jump = 0;
 var use = 0;
 
-if (killX != 0) {
+if (is_dead || killX != 0) {
 	x += killX;
 	sprite_index = spr_player1Hit;
 	image_xscale = killX;
@@ -14,8 +14,8 @@ if (killX != 0) {
 }
 
 if (side) {
-	var hmove = keyboard_check(vk_right) - keyboard_check(vk_left);
-	var vmove = keyboard_check(vk_down) - keyboard_check(vk_up);
+	hmove = keyboard_check(vk_right) - keyboard_check(vk_left) + keyboard_check(ord("D")) - keyboard_check(ord("A"));
+	vmove = keyboard_check(vk_down) - keyboard_check(vk_up) + keyboard_check(ord("S")) - keyboard_check(ord("W"));
 	var jump = keyboard_check_pressed(vk_space);
 	var use = keyboard_check_pressed(ord("E"));
 }
@@ -33,7 +33,7 @@ if (!climb_ladder) {
 	if (hmove != 0) {
 		image_speed = 1;
 		sprite_index = spr_player1Walk;
-		image_xscale = -hmove
+		image_xscale = -hmove;
 	}
 		
 	else

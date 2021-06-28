@@ -19,7 +19,13 @@ if(vertical && state){
 		}
 	}
 	y+=y_spd;
-	if(place_meeting(x,y+2*sign(y_spd),obj_player1)){
-		//obj_player1.y+=y_spd;
+	
+	if (y_spd > 0) {
+		with(instance_place(x,y - 4,obj_collider1)){
+			y += other.y_spd;
+		}
+		with(instance_place(x,y - 4,obj_ennemy)){
+			y += other.y_spd;
+		}
 	}
 }

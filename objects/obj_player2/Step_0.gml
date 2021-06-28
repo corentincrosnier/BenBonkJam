@@ -5,8 +5,8 @@ var delta_y = 0;
 var use = 0;
 
 if (!side) {
-	delta_x = keyboard_check(vk_left) - keyboard_check(vk_right);
-	delta_y = keyboard_check(vk_down) - keyboard_check(vk_up);
+	delta_x = keyboard_check(vk_left) - keyboard_check(vk_right) + keyboard_check(ord("A")) - keyboard_check(ord("D"));
+	delta_y = keyboard_check(vk_down) - keyboard_check(vk_up) + keyboard_check(ord("S")) - keyboard_check(ord("W"));
 	use = keyboard_check_pressed(ord("E"));
 	if (keyboard_check_pressed(vk_space)) {
 		if (!grab_object) {
@@ -18,7 +18,7 @@ if (!side) {
 					x = other.x - other.sprite_width / 2 - sprite_width / 2;
 					y = other.y;
 					src_collision_panic(obj_collider1);
-					src_collision_panic(obj_ennemy);
+					src_collision_panic(obj_enemy);
 				}
 			}
 		}
@@ -67,9 +67,9 @@ if (grab_object) {
 
 	with (object_grabbed) {
 		src_collision_panic(obj_collider1);
-		src_collision_panic(obj_ennemy);
-		if (place_meeting(x + other.x_speed, y, obj_collider1) || place_meeting(x + other.x_speed, y, obj_ennemy)) {
-			while (!place_meeting(x + sign(other.x_speed), y, obj_collider1) && !place_meeting(x + sign(other.x_speed), y, obj_ennemy)) {
+		src_collision_panic(obj_enemy);
+		if (place_meeting(x + other.x_speed, y, obj_collider1) || place_meeting(x + other.x_speed, y, obj_enemy)) {
+			while (!place_meeting(x + sign(other.x_speed), y, obj_collider1) && !place_meeting(x + sign(other.x_speed), y, obj_enemy)) {
 				x += sign(other.x_speed);
 				other.x += sign(other.x_speed);
 			}
@@ -78,8 +78,8 @@ if (grab_object) {
 		}
 		else
 			x += other.x_speed;
-		if (place_meeting(x, y + other.y_speed, obj_collider1) || place_meeting(x, y + other.y_speed, obj_ennemy)) {
-			while (!place_meeting(x, y + sign(other.y_speed), obj_collider1) && !place_meeting(x, y + sign(other.y_speed), obj_ennemy)) {
+		if (place_meeting(x, y + other.y_speed, obj_collider1) || place_meeting(x, y + other.y_speed, obj_enemy)) {
+			while (!place_meeting(x, y + sign(other.y_speed), obj_collider1) && !place_meeting(x, y + sign(other.y_speed), obj_enemy)) {
 				y += sign(other.y_speed);
 				other.y += sign(other.y_speed);
 			}
