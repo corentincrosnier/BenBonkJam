@@ -17,6 +17,8 @@ if (!side) {
 					is_grabbed = true;
 					x = other.x - other.sprite_width / 2 - sprite_width / 2;
 					y = other.y;
+					src_collision_panic(obj_collider1);
+					src_collision_panic(obj_ennemy);
 				}
 			}
 		}
@@ -64,8 +66,10 @@ if (grab_object) {
 	y_speed -= y_speed * fric_grab;
 
 	with (object_grabbed) {
-		if (place_meeting(x + other.x_speed, y, obj_collider1)) {
-			while (!place_meeting(x + sign(other.x_speed), y, obj_collider1)) {
+		src_collision_panic(obj_collider1);
+		src_collision_panic(obj_ennemy);
+		if (place_meeting(x + other.x_speed, y, obj_collider1) || place_meeting(x + other.x_speed, y, obj_ennemy)) {
+			while (!place_meeting(x + sign(other.x_speed), y, obj_collider1) && !place_meeting(x + sign(other.x_speed), y, obj_ennemy)) {
 				x += sign(other.x_speed);
 				other.x += sign(other.x_speed);
 			}
@@ -74,8 +78,8 @@ if (grab_object) {
 		}
 		else
 			x += other.x_speed;
-		if (place_meeting(x, y + other.y_speed, obj_collider1)) {
-			while (!place_meeting(x, y + sign(other.y_speed), obj_collider1)) {
+		if (place_meeting(x, y + other.y_speed, obj_collider1) || place_meeting(x, y + other.y_speed, obj_ennemy)) {
+			while (!place_meeting(x, y + sign(other.y_speed), obj_collider1) && !place_meeting(x, y + sign(other.y_speed), obj_ennemy)) {
 				y += sign(other.y_speed);
 				other.y += sign(other.y_speed);
 			}

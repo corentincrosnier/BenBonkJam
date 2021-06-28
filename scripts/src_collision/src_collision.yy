@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "BenBonk",
-    "path": "BenBonk.yyp",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_ladder",
+  "name": "src_collision",
   "tags": [],
   "resourceType": "GMScript",
 }

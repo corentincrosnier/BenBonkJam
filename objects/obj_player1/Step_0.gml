@@ -6,6 +6,13 @@ var vmove = 0;
 var jump = 0;
 var use = 0;
 
+if (killX != 0) {
+	x += killX;
+	sprite_index = spr_player1Hit;
+	image_xscale = killX;
+	exit;
+}
+
 if (side) {
 	var hmove = keyboard_check(vk_right) - keyboard_check(vk_left);
 	var vmove = keyboard_check(vk_down) - keyboard_check(vk_up);
@@ -33,11 +40,23 @@ if (!climb_ladder) {
 		sprite_index = spr_player1Idle;
 	hsp = hmove * walk_speed * (delta_time / ideal_delta_time);
 	vsp += grv * (delta_time / ideal_delta_time);
+
+	if (!place_meeting(x, y + 1, obj_collider1)) {
+		sprite_index = spr_player1jump;
+		if (vsp < -2)
+			image_index = 0;
+		else if (vsp > 2)
+			image_index = 2;
+		else
+			image_index = 1;
+	}
 }
 
 if (jump && place_meeting(x, y + 1, obj_collider1)) {
 	vsp = -jump_speed;
 	climb_ladder = false;
+	sprite_index = spr_player1jump;
+	image_index = 0;
 }
 
 if (climb_ladder) {
@@ -49,6 +68,7 @@ if (climb_ladder) {
 }
 
 if (!climb_ladder) {
+	src_collision_panic(obj_collider1);
 	if (place_meeting(x + hsp, y, obj_collider1)) {
 		while (!place_meeting(x + sign(hsp), y, obj_collider1)) {
 			x += sign(hsp);

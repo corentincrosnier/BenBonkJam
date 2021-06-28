@@ -1,23 +1,26 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(!climbing){
 
 if(distance_to_object(obj_player1)<maxDist && abs(y-obj_player1.y)<=30){
 	spd=70;
 	dir=point_direction(x,y,obj_player1.x,obj_player1.y);
 	hsp=lengthdir_x(spd/room_speed,dir);
+	image_xscale=sign(hsp);
 }
-else{
+else {
 	spd=50;
 	hsp=walkDir*spd/room_speed;
+	image_xscale=walkDir;
 }
 
 vsp+=grv/room_speed;
-if (place_meeting(x + hsp, y, obj_collider1) || place_meeting(x + hsp, y, obj_wallEnemy)){
+src_collision_panic(obj_collider1);
+src_collision_panic(obj_ennemy);
+if (place_meeting(x + hsp, y, obj_collider1) || place_meeting(x + hsp, y, obj_ennemy) || place_meeting(x + hsp, y, obj_wallEnemy)){
 	var otherEnemy=instance_place(x + hsp, y, obj_enemy1);
 	if(otherEnemy!=noone)
 		otherEnemy.walkDir*=-1;
-	while (!place_meeting(x + sign(hsp), y, obj_collider1) && !place_meeting(x + sign(hsp), y, obj_wallEnemy)) {
+	while (!place_meeting(x + sign(hsp), y, obj_collider1) && !place_meeting(x + sign(hsp), y, obj_ennemy) && !place_meeting(x + sign(hsp), y, obj_wallEnemy)) {
 		x += sign(hsp);
 	}
 	if(distance_to_object(obj_player1)<maxDist && abs(y-obj_player1.y)<=30)
@@ -28,15 +31,11 @@ if (place_meeting(x + hsp, y, obj_collider1) || place_meeting(x + hsp, y, obj_wa
 	image_xscale=walkDir;
 	}
 }
-if (place_meeting(x, y + vsp, obj_collider1) || place_meeting(x, y + vsp, obj_wallEnemy)){
-	while (!place_meeting(x, y + sign(vsp), obj_collider1) && !place_meeting(x, y + sign(vsp), obj_wallEnemy)) {
+if (place_meeting(x, y + vsp, obj_collider1) || place_meeting(x, y + vsp, obj_ennemy) || place_meeting(x, y + vsp, obj_wallEnemy)){
+	while (!place_meeting(x, y + sign(vsp), obj_collider1) && !place_meeting(x, y + sign(vsp), obj_ennemy) && !place_meeting(x, y + sign(vsp), obj_wallEnemy)) {
 		y += sign(vsp);
 	}
 	vsp = 0;
 }
 x+=hsp;
 y+=vsp;
-}
-else{
-	
-}

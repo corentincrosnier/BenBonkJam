@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "spr_enemy2",
-    "path": "sprites/spr_enemy2/spr_enemy2.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_ennemy",
-    "path": "objects/obj_ennemy/obj_ennemy.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -27,11 +21,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "level",
-    "path": "folders/Objects/level.yy",
+    "name": "BenBonk",
+    "path": "BenBonk.yyp",
   },
   "resourceVersion": "1.0",
-  "name": "obj_enemy2",
+  "name": "Object41",
   "tags": [],
   "resourceType": "GMObject",
 }
