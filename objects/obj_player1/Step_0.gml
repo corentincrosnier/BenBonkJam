@@ -23,7 +23,7 @@ if (side) {
 hsp = 0;
 
 if (vmove != 0 && !climb_ladder) {
-	climb_ladder = scr_ladder_verif(vmove);
+	climb_ladder = src_ladder_verif(vmove);
 	if (climb_ladder) {
 		sprite_index = spr_player1Climb;
 	}
@@ -64,7 +64,6 @@ if (climb_ladder) {
 		image_index += vmove;
 	image_speed = vmove * 2;
 	climb_ladder = src_ladder_climb(vmove, climb_speed);
-	show_debug_message(vsp);
 }
 
 if (!climb_ladder) {
