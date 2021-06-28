@@ -94,6 +94,7 @@
     {"id":{"name":"obj_usable","path":"objects/obj_usable/obj_usable.yy",},"order":29,},
     {"id":{"name":"obj_dialogue","path":"objects/obj_dialogue/obj_dialogue.yy",},"order":3,},
     {"id":{"name":"spr_player1Climb","path":"sprites/spr_player1Climb/spr_player1Climb.yy",},"order":16,},
+    {"id":{"name":"spr_sideAdetailMur","path":"sprites/spr_sideAdetailMur/spr_sideAdetailMur.yy",},"order":40,},
     {"id":{"name":"spr_led1Blue","path":"sprites/spr_led1Blue/spr_led1Blue.yy",},"order":15,},
     {"id":{"name":"spr_backgroundA2","path":"sprites/spr_backgroundA2/spr_backgroundA2.yy",},"order":19,},
     {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},"order":4,},
@@ -107,6 +108,7 @@
     {"id":{"name":"ts_decorB","path":"tilesets/ts_decorB/ts_decorB.yy",},"order":3,},
     {"id":{"name":"obj_spawner","path":"objects/obj_spawner/obj_spawner.yy",},"order":16,},
     {"id":{"name":"obj_fadeIn","path":"objects/obj_fadeIn/obj_fadeIn.yy",},"order":7,},
+    {"id":{"name":"ts_sideAdetailMur","path":"tilesets/ts_sideAdetailMur/ts_sideAdetailMur.yy",},"order":4,},
     {"id":{"name":"spr_elevatorPlat","path":"sprites/spr_elevatorPlat/spr_elevatorPlat.yy",},"order":20,},
     {"id":{"name":"Story","path":"rooms/Story/Story.yy",},"order":1,},
     {"id":{"name":"obj_elevatorPlat","path":"objects/obj_elevatorPlat/obj_elevatorPlat.yy",},"order":26,},
@@ -149,6 +151,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"Splash","path":"rooms/Splash/Splash.yy",},},
     {"roomId":{"name":"Story","path":"rooms/Story/Story.yy",},},
+    {"roomId":{"name":"Room5","path":"rooms/Room5/Room5.yy",},},
     {"roomId":{"name":"Room6","path":"rooms/Room6/Room6.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room4","path":"rooms/Room4/Room4.yy",},},
@@ -156,7 +159,6 @@
     {"roomId":{"name":"Room6","path":"rooms/Room6/Room6.yy",},},
     {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
-    {"roomId":{"name":"Room5","path":"rooms/Room5/Room5.yy",},},
     {"roomId":{"name":"Credit","path":"rooms/Credit/Credit.yy",},},
   ],
   "Folders": [

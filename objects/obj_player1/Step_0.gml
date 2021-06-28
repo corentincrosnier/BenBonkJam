@@ -18,6 +18,12 @@ if (side) {
 	vmove = keyboard_check(vk_down) - keyboard_check(vk_up) + keyboard_check(ord("S")) - keyboard_check(ord("W"));
 	var jump = keyboard_check_pressed(vk_space);
 	var use = keyboard_check_pressed(ord("E"));
+	var use = keyboard_check_pressed(ord("E"));
+}
+
+if (keyboard_check(ord("E")) == 0 && use_button != noone) {
+	with(use_button)
+		used = false;
 }
 
 hsp = 0;
@@ -86,6 +92,13 @@ if (!climb_ladder) {
 		with (instance_place(x, y, obj_usable))
 			if (layer == layer_get_id("Instances"))
 				state = !state;
+		var _button = instance_place(x, y, obj_pushButton1);
+		with (_button) {
+			if (layer == layer_get_id("Instances")) {
+				used = true;
+				other.use_button = _button;
+			}
+		}
 	}
 }
 

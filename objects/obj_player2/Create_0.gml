@@ -11,5 +11,6 @@ x_speed = 0;
 y_speed = 0;
 grab_object = false;
 object_grabbed = noone;
+use_button = noone;
 
 acc = 0.3;
