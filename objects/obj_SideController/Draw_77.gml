@@ -9,7 +9,7 @@ if(side && alarm[0]<=fadeTime*room_speed/2){
 	layer_set_visible("BackgroundB",false);
 	layer_set_visible("TileDeckA",true);
 	layer_set_visible("TileDeckB",false);
-	layer_depth("InstancesB", 800);
+	layer_depth("InstancesB", 1000);
 	with (obj_box1)
 		image_index = 0;
 	with (obj_box2) {
@@ -20,7 +20,7 @@ if(side && alarm[0]<=fadeTime*room_speed/2){
 }
 
 if(!side && alarm[0]<=fadeTime*room_speed/2){
-	layer_depth("InstancesB", -800);
+	layer_depth("InstancesB", -1000);
 	layer_set_visible("BackgroundA",false);
 	layer_set_visible("BackgroundB",true);
 	layer_set_visible("TileDeckA",false);
