@@ -13,4 +13,11 @@ grab_object = false;
 object_grabbed = noone;
 use_button = noone;
 
+magnet_relx = -sprite_width / 2;
+magnet_rely = 0;
+magnet_radius = 30;
+magnet_radius_max = 40;
+
+follow_speed = 0.5;
+
 acc = 0.3;

@@ -85,6 +85,7 @@
     {"id":{"name":"obj_shift","path":"objects/obj_shift/obj_shift.yy",},"order":4,},
     {"id":{"name":"spr_Title","path":"sprites/spr_Title/spr_Title.yy",},"order":32,},
     {"id":{"name":"spr_platform1","path":"sprites/spr_platform1/spr_platform1.yy",},"order":4,},
+    {"id":{"name":"src_grabMechanic","path":"scripts/src_grabMechanic/src_grabMechanic.yy",},"order":2,},
     {"id":{"name":"ts_plat","path":"tilesets/ts_plat/ts_plat.yy",},"order":1,},
     {"id":{"name":"End","path":"rooms/End/End.yy",},"order":13,},
     {"id":{"name":"obj_wallEnemy","path":"objects/obj_wallEnemy/obj_wallEnemy.yy",},"order":23,},
@@ -169,9 +170,9 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"roomId":{"name":"Splash","path":"rooms/Splash/Splash.yy",},},
     {"roomId":{"name":"Story","path":"rooms/Story/Story.yy",},},
-    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
     {"roomId":{"name":"Room4","path":"rooms/Room4/Room4.yy",},},

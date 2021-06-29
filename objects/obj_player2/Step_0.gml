@@ -8,29 +8,30 @@ if (!side) {
 	delta_x = keyboard_check(vk_left) - keyboard_check(vk_right) + keyboard_check(ord("A")) - keyboard_check(ord("D"));
 	delta_y = keyboard_check(vk_down) - keyboard_check(vk_up) + keyboard_check(ord("S")) - keyboard_check(ord("W"));
 	use = keyboard_check_pressed(ord("E"));
+
+	var _closest_grab_obj = noone;
+	src_magnet_range_reset();
+	if (!grab_object) {
+		_closest_grab_obj = src_grab_range_show(x + magnet_relx, y + magnet_rely, magnet_radius);
+	}
+
 	if (keyboard_check_pressed(vk_space)) {
 		if (!grab_object) {
-			object_grabbed = instance_place(x, y, obj_p2_grab);
+			object_grabbed = _closest_grab_obj;
+			show_debug_message(_closest_grab_obj);
 			if (object_grabbed != noone) {
 				grab_object = true;
 				audio_play_sound(snd_techNoise2, 1, true);
-				with (object_grabbed) {
+				with (object_grabbed)
 					is_grabbed = true;
-					x = other.x - other.sprite_width / 2 - sprite_width / 2;
-					y = other.y;
-					src_collision_panic(obj_collider1);
-					src_collision_panic(obj_enemy);
-				}
 			}
 		}
 		else {
 			grab_object = false;
 			audio_stop_sound(snd_techNoise2);
-			if (object_grabbed != noone) {
-				with (object_grabbed)
-					is_grabbed = false;
-				object_grabbed = noone;
-			}
+			with (object_grabbed)
+				is_grabbed = false;
+			object_grabbed = noone;
 		}
 	}
 }
@@ -38,11 +39,7 @@ if (!side) {
 else {
 	grab_object = false;
 	audio_stop_sound(snd_techNoise2);
-	if (object_grabbed != noone) {
-		with (object_grabbed)
-			is_grabbed = false;
-		object_grabbed = noone;
-	}
+	src_magnet_clean();
 }
 
 if (keyboard_check(ord("E")) == 0 && use_button != noone) {
@@ -72,31 +69,8 @@ other.bounce_first_frameY = false;
 if (grab_object) {
 	x_speed -= x_speed * fric_grab;
 	y_speed -= y_speed * fric_grab;
-
-	with (object_grabbed) {
-		src_collision_panic(obj_collider1);
-		src_collision_panic(obj_enemy);
-		if (place_meeting(x + other.x_speed, y, obj_collider1) || place_meeting(x + other.x_speed, y, obj_enemy)) {
-			while (!place_meeting(x + sign(other.x_speed), y, obj_collider1) && !place_meeting(x + sign(other.x_speed), y, obj_enemy)) {
-				x += sign(other.x_speed);
-				other.x += sign(other.x_speed);
-			}
-			other.x_speed *= -bounce_ratio;
-			other.bounce_first_frameX = true;
-		}
-		else
-			x += other.x_speed;
-		if (place_meeting(x, y + other.y_speed, obj_collider1) || place_meeting(x, y + other.y_speed, obj_enemy)) {
-			while (!place_meeting(x, y + sign(other.y_speed), obj_collider1) && !place_meeting(x, y + sign(other.y_speed), obj_enemy)) {
-				y += sign(other.y_speed);
-				other.y += sign(other.y_speed);
-			}
-			other.y_speed *= -bounce_ratio;
-			other.bounce_first_frameY = true;
-		}
-		else
-			y += other.y_speed;
-	}
+	
+	src_follow_magnet(x + magnet_relx, y + magnet_rely, object_grabbed);
 }
 
 else {
@@ -135,3 +109,5 @@ if (place_meeting(x, y + y_speed, obj_collider2)) {
 
 if (!bounce_first_frameY)
 	y += y_speed;
+
+src_collision_panic(obj_collider2);
