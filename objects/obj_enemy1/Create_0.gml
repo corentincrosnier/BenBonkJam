@@ -10,5 +10,6 @@ climbing=false;
 climbCooldown=room_speed*5;
 grv = 0.3*room_speed;
 maxDist=100;
+maxDist_y=60;
 bubbleCooldown=5;
 alarm[1]=random_range(1,3)*room_speed;

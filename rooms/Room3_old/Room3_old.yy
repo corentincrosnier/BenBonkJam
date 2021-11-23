@@ -300,8 +300,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "oldRooms",
+    "path": "folders/Rooms/oldRooms.yy",
   },
   "resourceVersion": "1.0",
   "name": "Room3_old",
