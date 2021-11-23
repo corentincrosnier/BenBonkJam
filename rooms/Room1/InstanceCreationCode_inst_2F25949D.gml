@@ -1,2 +1,2 @@
 leverId=1;
-minY=72;
+pathId = path_2;

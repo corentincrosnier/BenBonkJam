@@ -2,13 +2,10 @@
 // You can write your code in this editor
 leverId=0;
 buttonId=0;
-minY=y;
-minX=x;
-maxY=y;
-maxX=x;
-vertical=true;
+pathId = path_1;
 x_spd=0;
 y_spd=0;
-forward=true;
-spd=0.9;
+spd=4;
 state=false;
+running=false;
+last_path_pos = 0.0;

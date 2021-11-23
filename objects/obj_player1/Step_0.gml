@@ -50,7 +50,7 @@ if (!climb_ladder) {
 	hsp = hmove * walk_speed * (delta_time / ideal_delta_time);
 	vsp += grv * (delta_time / ideal_delta_time);
 
-	if (!place_meeting(x, y + 1, obj_collider1)) {
+	if (!place_meeting(x, y + 1, obj_collider1) && !place_meeting(x, y + 4, obj_elevatorPlat)) {
 		sprite_index = spr_player1jump;
 		if (vsp < -2)
 			image_index = 0;
