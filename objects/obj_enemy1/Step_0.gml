@@ -26,13 +26,18 @@ if ((!place_meeting(x + hsp, y, obj_player1)) && (place_meeting(x + hsp, y, obj_
 	while (!place_meeting(x + sign(hsp), y, obj_collider1) && !place_meeting(x + sign(hsp), y, obj_enemy) && !place_meeting(x + sign(hsp), y, obj_wallEnemy)) {
 		x += sign(hsp);
 	}
-	if(distance_to_object(obj_player1)<maxDist && abs(y-obj_player1.y)<=30)
+	hsp*=-1;
+	walkDir*=-1;
+	image_xscale=walkDir;
+	/*
+	if(distance_to_object(obj_player1)<maxDist && abs(y-obj_player1.y)<=maxDist_y)
 		hsp = 0;
 	else{
 		hsp*=-1;
 		walkDir*=-1;
 	image_xscale=walkDir;
 	}
+	*/
 }
 if (place_meeting(x, y + vsp, obj_collider1) || place_meeting(x, y + vsp, obj_enemy) || place_meeting(x, y + vsp, obj_wallEnemy)){
 	while (!place_meeting(x, y + sign(vsp), obj_collider1) && !place_meeting(x, y + sign(vsp), obj_enemy) && !place_meeting(x, y + sign(vsp), obj_wallEnemy)) {
