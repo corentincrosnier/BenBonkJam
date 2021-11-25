@@ -4,7 +4,7 @@
 
 if (!grab_object && !is_capture) {
 	show_debug_message(other);
-	if (other.is_grabbed == false) {
+	if (other.is_grabbed == false && other.is_dead == false) {
 		show_debug_message("COLLISION WITH BALL")
 		grab_object = true;
 		object_grabbed = other;

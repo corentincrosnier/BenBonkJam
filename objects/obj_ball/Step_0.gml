@@ -30,6 +30,8 @@ if (!is_dead && !is_capture) {
 	}
 
 	else if (is_grabbed){
+		src_place_meeting(x, y, obj_collider1)
+		src_place_meeting(x, y, obj_enemy)
 		is_physics = true;
 		sprite_index = spr_boule_strip11;
 		image_speed = 1;
@@ -57,4 +59,5 @@ else if (is_capture) {
 	image_speed = 1;
 	if (image_index >= 3)
 		image_index = 0;
+	is_physics = false;
 }
