@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+as_spawn = false;
 if (is_dead == false) {
 	if (is_grabbed)
 		audio_stop_sound(snd_energyBall_F2);

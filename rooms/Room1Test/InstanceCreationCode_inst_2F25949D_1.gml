@@ -1,2 +1,2 @@
 leverId=1;
-pathId = path_1;
+pathId = pth_3up;
