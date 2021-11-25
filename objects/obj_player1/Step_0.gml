@@ -50,7 +50,7 @@ if (!climb_ladder) {
 	hsp = hmove * walk_speed * (delta_time / ideal_delta_time);
 	vsp += grv * (delta_time / ideal_delta_time);
 
-	if (!place_meeting(x, y + 1, obj_collider1) && !place_meeting(x, y + 4, obj_elevatorPlat)) {
+	if (!src_place_meeting(x, y + 1, obj_collider1) && !src_place_meeting_elevator(x, y + 4)) {
 		sprite_index = spr_player1jump;
 		if (vsp < -2)
 			image_index = 0;
@@ -61,7 +61,7 @@ if (!climb_ladder) {
 	}
 }
 
-if (jump && place_meeting(x, y + 1, obj_collider1)) {
+if (jump && src_place_meeting(x, y + 1, obj_collider1)) {
 	vsp = -jump_speed;
 	climb_ladder = false;
 	sprite_index = spr_player1jump;
@@ -77,14 +77,14 @@ if (climb_ladder) {
 
 if (!climb_ladder) {
 	src_collision_panic(obj_collider1);
-	if (place_meeting(x + hsp, y, obj_collider1)) {
+	if (src_place_meeting(x + hsp, y, obj_collider1)) {
 		while (!place_meeting(x + sign(hsp), y, obj_collider1)) {
 			x += sign(hsp);
 		}
 		hsp = 0;
 	}
 
-	if (place_meeting(x, y + vsp, obj_collider1)) {
+	if (src_place_meeting(x, y + vsp, obj_collider1)) {
 		while (!place_meeting(x, y + sign(vsp), obj_collider1)) {
 			y += sign(vsp);
 		}
@@ -92,10 +92,11 @@ if (!climb_ladder) {
 	}
 
 	if (use){
-		with (instance_place(x, y, obj_usable))
-			if (layer == layer_get_id("Instances"))
+		with (src_instance_place(x, y, obj_usable)) {
+			if (usable_by_player && layer == layer_get_id("Instances"))
 				state = !state;
-		var _button = instance_place(x, y, obj_pushButton1);
+		}
+		var _button = src_instance_place(x, y, obj_pushButton1);
 		with (_button) {
 			if (layer == layer_get_id("Instances")) {
 				used = true;

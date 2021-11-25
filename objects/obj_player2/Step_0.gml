@@ -37,9 +37,11 @@ if (!side) {
 }
 
 else {
-	grab_object = false;
-	audio_stop_sound(snd_techNoise2);
-	src_magnet_clean();
+	if (grab_object && object_grabbed.object_index != obj_ball) {
+		grab_object = false;
+		audio_stop_sound(snd_techNoise2);
+		src_magnet_clean();
+	}
 }
 
 if (keyboard_check(ord("E")) == 0 && use_button != noone) {
@@ -70,12 +72,12 @@ if (grab_object) {
 	x_speed -= x_speed * fric_grab;
 	y_speed -= y_speed * fric_grab;
 	
-	src_follow_magnet(x + magnet_relx, y + magnet_rely, object_grabbed);
+	src_follow_magnet(x + magnet_relx, y + magnet_rely, object_grabbed, true);
 }
 
 else {
 	if (use) {
-		with (instance_place(x, y, obj_usable))
+		with (usable_by_player && instance_place(x, y, obj_usable))
 			if (layer == layer_get_id("InstancesB"))
 				state = !state;
 		var _button = instance_place(x, y, obj_pushButton1);

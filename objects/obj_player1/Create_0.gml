@@ -1,5 +1,7 @@
 /// @desc create player1
 
+event_inherited();
+
 walk_speed = 3;
 climb_speed = 1.5;
 jump_speed = 5.4;

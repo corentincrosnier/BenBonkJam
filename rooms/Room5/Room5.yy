@@ -485,17 +485,17 @@
       ],"visible":true,"depth":1200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"InstancesB","tags":[],"resourceType":"GMRInstanceLayer",},
     {"spriteId":{"name":"spr_backgroundA2","path":"sprites/spr_backgroundA2/spr_backgroundA2.yy",},"colour":4294967295,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":true,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":1300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"BackgroundA","tags":[],"resourceType":"GMRBackgroundLayer",},
     {"spriteId":{"name":"spr_backgroundB3","path":"sprites/spr_backgroundB3/spr_backgroundB3.yy",},"colour":4294967295,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":true,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":false,"depth":1400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"BackgroundB","tags":[],"resourceType":"GMRBackgroundLayer",},
-    {"depth":1500,"effectType":"_filter_distort","properties":[
+    {"effectType":"_filter_distort","properties":[
         {"type":0,"name":"g_DistortScale","value":"1",},
         {"type":0,"name":"g_DistortAmount","value":"28",},
         {"type":0,"name":"g_DistortOffset","value":"0",},
         {"type":0,"name":"g_DistortOffset","value":"0",},
         {"type":2,"name":"g_DistortTexture","value":"_filter_distort_smoothnoise",},
-      ],"visible":true,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Effect_2","tags":[],"resourceType":"GMREffectLayer",},
-    {"depth":1600,"effectType":"_filter_large_blur","properties":[
+      ],"visible":true,"depth":1500,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Effect_2","tags":[],"resourceType":"GMREffectLayer",},
+    {"effectType":"_filter_large_blur","properties":[
         {"type":0,"name":"g_Radius","value":"4",},
         {"type":2,"name":"g_NoiseTexture","value":"_filter_large_blur_noise",},
-      ],"visible":true,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Effect_1","tags":[],"resourceType":"GMREffectLayer",},
+      ],"visible":true,"depth":1600,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Effect_1","tags":[],"resourceType":"GMREffectLayer",},
   ],
   "inheritLayers": false,
   "creationCodeFile": "",

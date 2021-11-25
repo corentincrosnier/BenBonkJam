@@ -9,9 +9,10 @@ bounce_first_frameY = false;
 
 x_speed = 0;
 y_speed = 0;
-grab_object = false;
-object_grabbed = noone;
 use_button = noone;
+grab_object = false;
+
+object_grabbed = noone;
 
 magnet_relx = -sprite_width / 2;
 magnet_rely = 0;

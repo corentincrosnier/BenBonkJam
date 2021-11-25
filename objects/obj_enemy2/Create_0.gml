@@ -1,4 +1,6 @@
 /// @desc Insert description here
+event_inherited();
+
 spd=60;
 climbSpeed = 1.3;
 hsp=0;
