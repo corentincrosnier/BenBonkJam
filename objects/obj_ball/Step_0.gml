@@ -42,8 +42,22 @@ if (!is_dead && !is_capture) {
 	}
 
 	else {
-		sprite_index = spr_boulespawn_strip4;
-		image_speed = 1;
+		 if (!as_spawn) {
+			sprite_index = spr_boulespawn_strip4;
+			image_speed = 1;
+			if (image_index >= 3) {
+				sprite_index = spr_boule_strip11
+				image_index = 0;
+				as_spawn = true;
+			}
+		}
+		else {
+			sprite_index = spr_boule_strip11;
+			image_speed = 1;
+			if (image_index >= 3) {
+				image_index = 0;
+			}
+		}
 	}
 }
 

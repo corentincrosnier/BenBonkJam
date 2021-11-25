@@ -9,3 +9,4 @@ bounce_ratio = 0.2;
 is_physics = false;
 is_dead = false;
 is_capture = false;
+as_spawn = false;
