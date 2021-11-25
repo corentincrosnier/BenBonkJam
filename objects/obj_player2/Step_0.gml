@@ -81,8 +81,8 @@ if (grab_object) {
 
 else {
 	if (use) {
-		with (usable_by_player && instance_place(x, y, obj_usable))
-			if (layer == layer_get_id("InstancesB"))
+		with (instance_place(x, y, obj_usable))
+			if (usable_by_player && layer == layer_get_id("InstancesB"))
 				state = !state;
 		var _button = instance_place(x, y, obj_pushButton1);
 		with (_button) {
