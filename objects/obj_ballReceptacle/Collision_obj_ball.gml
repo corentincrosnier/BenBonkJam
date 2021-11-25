@@ -8,7 +8,7 @@ if (!grab_object && !is_capture) {
 		show_debug_message("COLLISION WITH BALL")
 		grab_object = true;
 		object_grabbed = other;
-		audio_play_sound(snd_techNoise2, 1, true);
+		audio_play_sound(snd_energyBall3, 1, false);
 		is_capture = true;
 		with (other) {
 			is_grabbed = true;

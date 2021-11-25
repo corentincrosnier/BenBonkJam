@@ -21,7 +21,10 @@ if (!side) {
 			show_debug_message(_closest_grab_obj);
 			if (object_grabbed != noone) {
 				grab_object = true;
-				audio_play_sound(snd_techNoise2, 1, true);
+				if (object_grabbed.object_index == obj_ball)
+					audio_play_sound(snd_energyBall_F2, 1, true);
+				else
+					audio_play_sound(snd_techNoise2, 1, true);
 				with (object_grabbed)
 					is_grabbed = true;
 			}
@@ -29,6 +32,7 @@ if (!side) {
 		else {
 			grab_object = false;
 			audio_stop_sound(snd_techNoise2);
+			audio_stop_sound(snd_energyBall_F2);
 			with (object_grabbed)
 				is_grabbed = false;
 			object_grabbed = noone;
