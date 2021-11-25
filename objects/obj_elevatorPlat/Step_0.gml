@@ -7,9 +7,11 @@ if(state && !running) {
 	path_start(pathId, spd, path_action_reverse, false);
 	path_position = last_path_pos;
 	running = true;
+	audio_play_sound(snd_elevator,1,true);
 }
 
 else if(!state && running) {
+	audio_stop_sound(snd_elevator);
 	last_path_pos = path_position;
 	path_end();
 	running = false;

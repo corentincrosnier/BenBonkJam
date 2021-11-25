@@ -2,6 +2,8 @@
 
 if(state && !switched){
 	switched=true;
+	audio_sound_pitch(snd_click4,random_range(0.7,1.2));
+	audio_play_sound(snd_click4,1,false);
 	image_index=1;
 	with(obj_door){
 		if(leverId==other.leverId){
@@ -19,6 +21,8 @@ if(state && !switched){
 
 else if(!state && switched){
 	switched=false;
+	audio_sound_pitch(snd_click4,random_range(0.7,1.2));
+	audio_play_sound(snd_click4,1,false);
 	image_index=0;
 	with(obj_door){
 		if(leverId==other.leverId){

@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_door.wav",
-  "duration": 0.357392,
+  "soundFile": "snd_elevator.mp3",
+  "duration": 13.8971434,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_door",
+  "name": "snd_elevator",
   "tags": [],
   "resourceType": "GMSound",
 }
