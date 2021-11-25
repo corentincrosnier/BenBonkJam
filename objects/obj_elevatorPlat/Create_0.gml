@@ -5,8 +5,8 @@ event_inherited();
 
 leverId=0;
 buttonId=0;
-pathId = path_1;
-spd=4;
+pathId = noone;
+spd=6;
 state=false;
 running=false;
 last_path_pos = 0.0;
