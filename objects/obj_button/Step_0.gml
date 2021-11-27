@@ -11,6 +11,11 @@ if((place_meeting(x,y,obj_player1) || place_meeting(x,y,obj_box1) || place_meeti
 			//image_index=(image_index+1)%2;
 		}
 	}
+	with(obj_elevatorPlat){
+		if(buttonId==other.buttonId){
+			state=(state)?false:true;
+		}
+	}
 }
 else if((!place_meeting(x,y,obj_player1) && !place_meeting(x,y,obj_box1) && !place_meeting(x,y,obj_box2)) && pressed){
 	image_index=0;
@@ -21,6 +26,11 @@ else if((!place_meeting(x,y,obj_player1) && !place_meeting(x,y,obj_box1) && !pla
 		if(buttonId==other.buttonId){
 			state=(state)?false:true;
 			//image_index=(image_index+1)%2;
+		}
+	}
+	with(obj_elevatorPlat){
+		if(buttonId==other.buttonId){
+			state=(state)?false:true;
 		}
 	}
 }

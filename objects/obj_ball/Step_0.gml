@@ -9,7 +9,7 @@ if (!is_dead && !is_capture) {
 		image_speed = 1;
 		if (image_index >= 3)
 			image_index = 0;
-		vsp += grv * (delta_time / ideal_delta_time);
+		//vsp += grv * (delta_time / ideal_delta_time);
 
 		if (src_place_meeting(x + hsp, y, obj_collider1)) {
 			while (!place_meeting(x + sign(hsp), y, obj_collider1)) {

@@ -13,3 +13,4 @@ last_path_pos = 0.0;
 path_begin_pos = {x : x, y : y};
 is_elevator = true;
 is_physics = true;
+path_action = path_action_reverse;
