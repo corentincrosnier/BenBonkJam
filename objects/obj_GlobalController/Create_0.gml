@@ -9,6 +9,7 @@ side=true;
 globalvar ideal_delta_time;
 ideal_delta_time = 1000000 / room_speed;
 
+musicPlaying=false;
 
 audio_sound_gain(snd_puzzle1,3,0);
 audio_sound_gain(snd_door,0.1,0);
@@ -24,8 +25,7 @@ audio_sound_gain(snd_energyBall2,1,0);
 audio_sound_gain(snd_energyBall3,1,0);
 audio_sound_gain(snd_energyBall4,1,0);
 audio_sound_gain(snd_darkPluckDelay,1,0);
-
-audio_play_sound(snd_puzzle1,1,true);
+audio_group_load(audiogroup1);
 
 
 globalvar viewW;

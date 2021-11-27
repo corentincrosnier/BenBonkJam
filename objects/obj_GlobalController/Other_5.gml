@@ -9,3 +9,7 @@ if(room==Story){
 	resizedCam=true;
 }
 */
+
+if(room!=Story){
+	audio_group_stop_all(audiogroup_default);
+}
