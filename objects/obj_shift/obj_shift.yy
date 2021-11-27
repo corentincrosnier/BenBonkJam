@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_shift",
-    "path": "sprites/spr_shift/spr_shift.yy",
+    "name": "spr_shift2",
+    "path": "sprites/spr_shift2/spr_shift2.yy",
   },
   "solid": false,
   "visible": true,

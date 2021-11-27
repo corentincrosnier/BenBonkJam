@@ -1,6 +1,6 @@
 /// @desc
 
-if(room==Room6){
+if(room==Room8){
 	room_goto(End);
 }
 else{
