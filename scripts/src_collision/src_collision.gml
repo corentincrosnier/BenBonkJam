@@ -91,7 +91,7 @@ function src_collision_panic(_obj) {
 	if(obj_find != noone) {
 		if (variable_instance_exists(id, "is_elevator") && is_elevator) {
 			if (variable_instance_exists(obj_find.id, "is_elevator") && obj_find.is_elevator) {
-				if (obj_find.object_index != obj_elevator)
+				if (obj_find.object_index != obj_elevatorPlat)
 					return (noone);
 			}
 			else if (obj_find.object_index == obj_player1) {
