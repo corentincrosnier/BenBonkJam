@@ -81,7 +81,6 @@
     {"id":{"name":"snd_click2","path":"sounds/snd_click2/snd_click2.yy",},"order":1,},
     {"id":{"name":"spr_enemy2_2","path":"sprites/spr_enemy2_2/spr_enemy2_2.yy",},"order":45,},
     {"id":{"name":"obj_SideController","path":"objects/obj_SideController/obj_SideController.yy",},"order":2,},
-    {"id":{"name":"Room1Test","path":"rooms/Room1Test/Room1Test.yy",},"order":23,},
     {"id":{"name":"spr_tileDeck2","path":"sprites/spr_tileDeck2/spr_tileDeck2.yy",},"order":43,},
     {"id":{"name":"spr_e","path":"sprites/spr_e/spr_e.yy",},"order":2,},
     {"id":{"name":"ts_decorA","path":"tilesets/ts_decorA/ts_decorA.yy",},"order":2,},
@@ -105,9 +104,9 @@
     {"id":{"name":"spr_player1Climb_old","path":"sprites/spr_player1Climb_old/spr_player1Climb_old.yy",},"order":51,},
     {"id":{"name":"spr_Title","path":"sprites/spr_Title/spr_Title.yy",},"order":32,},
     {"id":{"name":"spr_platform1","path":"sprites/spr_platform1/spr_platform1.yy",},"order":4,},
+    {"id":{"name":"Room1Test","path":"rooms/Room1Test/Room1Test.yy",},"order":26,},
     {"id":{"name":"src_grabMechanic","path":"scripts/src_grabMechanic/src_grabMechanic.yy",},"order":2,},
     {"id":{"name":"snd_energyBall3","path":"sounds/snd_energyBall3/snd_energyBall3.yy",},"order":8,},
-    {"id":{"name":"Room6","path":"rooms/Room6/Room6.yy",},"order":24,},
     {"id":{"name":"ts_plat","path":"tilesets/ts_plat/ts_plat.yy",},"order":1,},
     {"id":{"name":"Room5","path":"rooms/Room5/Room5.yy",},"order":21,},
     {"id":{"name":"End","path":"rooms/End/End.yy",},"order":13,},
@@ -154,7 +153,7 @@
     {"id":{"name":"obj_lever1","path":"objects/obj_lever1/obj_lever1.yy",},"order":24,},
     {"id":{"name":"spr_spawnboule","path":"sprites/spr_spawnboule/spr_spawnboule.yy",},"order":28,},
     {"id":{"name":"ts_decorB","path":"tilesets/ts_decorB/ts_decorB.yy",},"order":3,},
-    {"id":{"name":"Room7","path":"rooms/Room7/Room7.yy",},"order":25,},
+    {"id":{"name":"Room6","path":"rooms/Room6/Room6.yy",},"order":25,},
     {"id":{"name":"obj_spawner","path":"objects/obj_spawner/obj_spawner.yy",},"order":16,},
     {"id":{"name":"RoomTest","path":"rooms/RoomTest/RoomTest.yy",},"order":6,},
     {"id":{"name":"obj_fadeIn","path":"objects/obj_fadeIn/obj_fadeIn.yy",},"order":7,},
@@ -223,6 +222,7 @@
     {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
     {"roomId":{"name":"Room4","path":"rooms/Room4/Room4.yy",},},
     {"roomId":{"name":"Room5","path":"rooms/Room5/Room5.yy",},},
+    {"roomId":{"name":"Room6","path":"rooms/Room6/Room6.yy",},},
     {"roomId":{"name":"Room1_old","path":"rooms/Room1_old/Room1_old.yy",},},
     {"roomId":{"name":"Room2_old","path":"rooms/Room2_old/Room2_old.yy",},},
     {"roomId":{"name":"Room3_old","path":"rooms/Room3_old/Room3_old.yy",},},
@@ -233,12 +233,12 @@
     {"roomId":{"name":"Credit","path":"rooms/Credit/Credit.yy",},},
     {"roomId":{"name":"RoomTest","path":"rooms/RoomTest/RoomTest.yy",},},
 <<<<<<< HEAD
-    {"roomId":{"name":"Room1Test","path":"rooms/Room1Test/Room1Test.yy",},},
     {"roomId":{"name":"Room6","path":"rooms/Room6/Room6.yy",},},
     {"roomId":{"name":"Room7","path":"rooms/Room7/Room7.yy",},},
 =======
-    {"roomId":{"name":"Room6","path":"rooms/Room6/Room6.yy",},},
->>>>>>> v2_tom
+    {"roomId":{"name":"Room1Test","path":"rooms/Room1Test/Room1Test.yy",},},
+>>>>>>> origin/v2_corentin
+    {"roomId":{"name":"Room1Test","path":"rooms/Room1Test/Room1Test.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -266,6 +266,7 @@
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
+    {"targets":-1,"resourceVersion":"1.3","name":"audiogroup1","resourceType":"GMAudioGroup",},
   ],
   "TextureGroups": [
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},

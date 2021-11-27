@@ -12,7 +12,7 @@ if(state && !running) {
 
 else if(!state && running) {
 	audio_stop_sound(snd_elevator);
-	last_path_pos = path_position;
+	last_path_pos = path_positionprevious;
 	path_end();
 	running = false;
 }
