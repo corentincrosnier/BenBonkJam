@@ -7,7 +7,6 @@ hsp=0;
 vsp=0;
 dir=0;
 //walkDir=choose(-1,1);
-walkDir=1;
 climbDir=0;
 image_xscale=walkDir;
 climbing=false;
