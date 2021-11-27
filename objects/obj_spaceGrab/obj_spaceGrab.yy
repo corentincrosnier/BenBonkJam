@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_spaceGrab",
-    "path": "sprites/spr_spaceGrab/spr_spaceGrab.yy",
+    "name": "spr_spaceGrab2",
+    "path": "sprites/spr_spaceGrab2/spr_spaceGrab2.yy",
   },
   "solid": false,
   "visible": true,

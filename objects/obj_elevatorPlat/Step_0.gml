@@ -6,6 +6,7 @@ if(state && !running) {
 	y = path_begin_pos.y;
 	path_start(pathId, spd, path_action_reverse, false);
 	path_position = last_path_pos;
+	path_positionprevious = last_path_pos;
 	running = true;
 	audio_play_sound(snd_elevator,1,true);
 }

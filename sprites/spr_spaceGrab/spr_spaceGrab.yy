@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "tuto",
-    "path": "folders/Sprites/tuto.yy",
+    "name": "old",
+    "path": "folders/Sprites/tuto/old.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_spaceGrab",
